@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fade-in-up 0.8s ease-out forwards;
+}
+
+.animate-delay-200 {
+    animation-delay: 0.2s;
+}
+
+[x-cloak] {
+    display: none !important;
+}
+
+.auth-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f4ff;
+}
+
+.auth-box {
+    display: flex;
+    width: 900px;
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.auth-left {
+    background: #f8faff;
+    padding: 40px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-right {
+    background: #006eff;
+    color: white;
+    padding: 40px;
+    flex: 1;
+}
+
+.auth-right h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.auth-form input {
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.auth-form button {
+    border-radius: 50px;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-yellow {
+    background-color: #ffc107;
+    color: black;
+}
+
+.btn-white {
+    background-color: white;
+    color: #006eff;
+    border: 1px solid #fff;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
+    /* ubah bg menjadi putih */
+    -webkit-text-fill-color: #000000 !important;
+    /* ubah teks jadi hitam agar terlihat */
+    caret-color: #000000 !important;
+    transition: background-color 9999s ease-out, color 9999s ease-out;
+}
